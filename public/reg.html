@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="boot/css/bootstrap.css">
+    <script src="boot/js/jquery.min.js"></script>
+    <script src="boot/js/popper.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <style>
+        .h3{height:50px;border-bottom:1px solid #ddd;}
+        .yz{
+            background:linear-gradient(to bottom,#eee,#20c997);
+            border-radius:20px;
+            color:#fff;
+        }
+        .reg{padding-left:25px;}
+        .zc{background:#fd7e14;}
+        .check{font-size:15px;}
+        .line-font{
+            height:20px;
+            text-align:center;
+            vertical-align:20px;
+            font-size:15px;
+            color:#aaa;
+        }
+        .line{
+            display:inline-block;
+            width:50px;
+            border-top:1px solid #aaa;
+            vertical-align:5px
+        }
+        .other_reg{
+            height:30px;
+            margin:5px 20px;
+        }
+        .other_reg a{
+            display:block;
+            width:30px;height:30px;
+            background:url(image/login_2.PNG) no-repeat;
+        }
+        .other_reg>a:first-child{
+            background-position:0px 0px;
+            left:80px;
+        }
+        .other_reg>a:nth-child(2){
+            background-position:-35px 0px;
+            left:110px;
+        }
+        .other_reg>a:nth-child(3){
+            background-position:-70px 0px;
+            left:140px;
+        }
+    </style>
+</head>
+<body>
+<div class="container d-flex">
+    <img src="image/login_1.JPG" alt="">
+    <div class="form-group">
+        <div class="h3 p-2">注册</div>
+        <div class="reg pt-1">
+            <div class="my-2">
+                <input id="uname" class="form-control" placeholder="请输入手机号码" type="text">
+            </div>
+            <div class="d-flex my-2">
+                <input  class="form-control" placeholder="输入验证码" type="text">
+                <button class="yz btn btn-outline-info ml-2">获取验证码</button>
+            </div>
+            <div class="my-2">
+                <input  id="upwd" class="form-control" placeholder="请输入密码(字母和数字组合,6至12位)" type="password">
+            </div>
+            <div class="check mt-4 font-weight-bold">
+                <input type="checkbox">
+                我已阅读并同意
+                <a href="">用户协议</a>
+                和
+                <a href="">隐私条款</a>
+            </div>
+            <div class="mt-2">
+                <button class="zc btn btn-block mb-2" onclick="reg()">注册</button>
+            </div>
+            <div class="text-muted">
+                已有账号马上
+                <a href="">登录</a>
+            </div>
+        </div>
+        <div class="line-font my-3">
+            <span class="line"></span>
+            <span>其他账号登录</span>
+            <span class="line"></span>
+        </div>
+        <div class="other_reg d-flex justify-content-center">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+    </div>
+    <script>
+        function reg(){  
+        //    获取表单数据
+            var $uname=uname.value;
+            var $upwd=upwd.value;
+        //   创建异步对象
+            var xhr=new XMLHttpRequest();
+        //   绑定监听 获取响应
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    if(result==1){
+                        alert("注册成功");
+                    }else{
+                        alert("用户已存在")
+                    }
+                }
+            }
+        //验证数据是否为空
+            if(!$uname){
+                alert("用户名不能为空");
+            }
+            if(!upwd){
+                alert("密码不能为空")
+            }
+        //    打开连接 创建请求
+            xhr.open("post","/user/v5/reg",true);
+        //    设置请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var formdata="uname="+uname.value+"&upwd="+upwd.value;
+        //    发送请求
+            xhr.send(formdata);
+        }
+    </script>
+</div>
+</body>
+</html>

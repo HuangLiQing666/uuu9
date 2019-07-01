@@ -1,0 +1,9 @@
+body{
+    font-size:14px;
+    color:#666;
+    font-family:"Microsoft YaHei";
+    background: #f9f9f9;
+}
+.clear{
+    clear:both;
+}

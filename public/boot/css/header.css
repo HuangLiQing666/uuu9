@@ -1,0 +1,22 @@
+*{margin:0;padding:0;}
+.container{margin:0;padding:0;}
+.header{
+    width:1240px;
+    margin:0 auto;
+}
+.header_navigation,.header_tittle{
+    height:40px;
+}
+.header_tittle>ul>li>a,.header_news a,.header_reg_login a,.header_other a,.keywords a,.header_navtop>ul>li>a
+{
+    font-size: 14px;
+    color:#333;
+}
+.header_top{
+    width:1240px;height:100px;
+}
+.header_navtop{
+    background:#fff;
+    border-top:2px solid #EE7701;
+    height:63px;
+}
