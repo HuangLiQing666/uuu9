@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="boot/css/bootstrap.css">
+    <script src="boot/js/jquery.min.js"></script>
+    <script src="boot/js/popper.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <style>
+        .dd{
+            width:500px;height:200px;
+            overflow: hidden;}
+        .dd>div{
+            width:200px;height:200px;
+            float:left;
+        }
+        .dd>div+div{margin-left:30px;}
+        .d1{background:#000;}
+        .d2{background:#f00;}
+        .d3{background:#0f0;}
+        .d4{background:#00f;}
+        .d5{background:#ff0;}
+    </style>
+</head>
+<body>
+<div class="dd">
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+    <div class="d5"></div>
+</div>
+</body>
+</html>
