@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<title>根据页面滚动位置显示浮动框</title>
+	<style>
+    body{height:2000px;}
+    #toTop{
+      position:fixed;
+      bottom:100px;
+      right:-100px;
+      /* display:none; */
+      width:100px;
+      opacity:0;
+      overflow:hidden;
+      transition:all .5s linear;
+    }
+    #toTop.show{
+      right:0px;
+      opacity:1;
+    }
+  </style>
+
+ </head>
+ <body>
+	<div id="toTop">
+		<a href="#">返回顶部</a>
+	</div>
+  <script>
+    toTop.children[0].onclick=function(e){
+      e.preventDefault();
+      window.scrollTo(0,0);
+    }
+    window.onscroll=function(){
+      var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+
+      if(scrollTop>=500){
+        toTop.className="show"
+      }else{
+        toTop.className=""
+      }
+    }
+	</script>
+ </body>
+</html>
