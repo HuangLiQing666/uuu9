@@ -15,7 +15,7 @@
 <body>
     <header><iframe class="my_header" scrolling="no" src="header.html" frameborder="0"></iframe></header>
     <article>
-        <div class="w-1200 clear">
+        <div class="index_head w-1200 clear">
             <div><img src="image/index/5d1f05c700787.jpg" alt=""></div>
             <div class="mt-20 index_tittle clear">
                 <div id="index_tittle_carousel" class="carousel float-left" data-ride="carousel">
@@ -158,10 +158,10 @@
                 <div class="news float-left">
                     <div class="news_tab clear">
                         <div class="news_tit">
-                            <a class="on" data-target="tab1" data-toggle="tabs" href="javascript:;">今日要闻</a>
-                            <a data-target="tab2" data-toggle="tabs" href="javascript:;">电子竞技</a>
-                            <a data-target="tab3" data-toggle="tabs" href="javascript:;">单机游戏</a>
-                            <a data-target="tab4" data-toggle="tabs" href="javascript:;">八卦综合</a>
+                            <a class="on" data-target="tab1" href="javascript:;">今日要闻</a>
+                            <a data-target="tab2" href="javascript:;">电子竞技</a>
+                            <a data-target="tab3" href="javascript:;">单机游戏</a>
+                            <a data-target="tab4" href="javascript:;">八卦综合</a>
                         </div>
                         <em class="float-right"><a href=""><i></i>成为作者</a></em>
                     </div>
@@ -1380,6 +1380,12 @@
                             </div>
                         </div>
                     </div>
+                    <div class="rows mt-25">
+                        <div class="title clear">
+                            <h2>官方新闻</h2>
+                            <em><a href="">更多</a></em>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1407,15 +1413,32 @@
         (function(){
             //查找要修改的元素
             var newsTab=document.getElementsByClassName("news_tab")[0];
-            console.log(newsTab)
+            var as=document.querySelectorAll("div.news_tab>div.news_tit a");
+//            获取news顶部距离window窗口顶部的距离
+            var head=document.getElementsByTagName("header")[0];
+            var indHead=document.getElementsByClassName("index_head")[0];
+            var esPorts=document.getElementsByClassName("esports")[0];
+            var newsList=document.getElementsByClassName("newslist")[0];
+            var headHeight=head.scrollHeight;
+            var indHeight=indHead.scrollHeight;
+            var espHeight=esPorts.scrollHeight;
+            var newsHeight=newsList.scrollHeight;
+            var newsTop=headHeight+indHeight+espHeight;
+//            点击a标签后回到当前div的顶部
+            for(var a of as){
+                a.onclick=function(e){
+                    e.preventDefault();
+                    window.scrollTo(0,newsTop);
+                }
+            }
             //  绑定事件处理函数
             window.onscroll=function(){
             //    获得页面滚动距离
                 var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
             //       当页面window滚动距离为1263px时
-                if(scrollTop>=1263){
+                if(scrollTop>=newsTop){
                     newsTab.classList.add("newsFixed");
-                }else if(1263<=scrollTop<=3200){
+                }else if(newsTop<=scrollTop<=newsHeight){
                 //当页面滚动距离超过3200时
                     newsTab.classList.remove("newsFixed");
                 }
