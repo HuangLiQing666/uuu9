@@ -186,6 +186,14 @@ a:hover .scale_img{transform: scale(1.1);}
     vertical-align: middle;
     margin-right: 5px;
 }
+.newsFixed{
+    position:fixed;
+    left:50%;top:0;
+    background:#f9f9f9;
+    width:1200px;
+    margin-left:-600px;
+    z-index: 100;
+}
 .news_box{
     padding:13px 0 20px;
     border-bottom:1px solid #ebebeb;

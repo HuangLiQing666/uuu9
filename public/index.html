@@ -1386,28 +1386,38 @@
     </article>
     <footer><iframe class="my_footer" scrolling="no" src="footer.html" frameborder="0"></iframe></footer>
     <script>
+        /*news_tab切换标签*/
         (function(){
-//         找到触发事件的元素 并绑定处理触发事件函数
-//            var newsTit=document.getElementsByClassName("news_tit")[0];
-            var as=document.querySelectorAll("div.news_tit>a")
-            for(var a of as)
-            {
-                a.onclick = function () {
-                    var a = this;
-//                        查找当前div下是否有其他a标签有on
-                    var on = document.querySelector("div.news_tit>a.on");
-//                        如果有则清除 没有找到的话就执行下一行
-                    on !== null && (on.className = "");
-                    a.className = "on";
-//                     找到要修改的元素
-//                        获取绑定在a标签上的id
-                    var id = a.dataset.target
-                    var div = document.getElementById(id);
-//                        每次点击a标签时先判断其他绑定的div内容上的className是否有open
-//                        如果有
-                    var open = document.querySelector("div.newslist>div.open")
-                    open != null && (open.className = "");
-                    div.className = "open";
+//            找到触发事件元素的父元素 并绑定处理事件函数
+            $("div.news_tit")
+                .on("click","a",function(){
+                //    让当前标签的class为on 并清除其他标签的on
+                    $(this).siblings().removeClass();
+                    $(this).addClass("on");
+                //    获得当前标签绑定的div的id
+                    var $id=$(this).attr("data-target");
+                //通过id找到当前绑定的div
+                    var $div=$(`#${$id}`);
+                //    让当前div的class为open 并去掉其他div的open
+                    $div.siblings().removeClass();
+                    $div.addClass("open");
+                });
+        })();
+        /*news_tab固定导航栏*/
+        (function(){
+            //查找要修改的元素
+            var newsTab=document.getElementsByClassName("news_tab")[0];
+            console.log(newsTab)
+            //  绑定事件处理函数
+            window.onscroll=function(){
+            //    获得页面滚动距离
+                var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+            //       当页面window滚动距离为1263px时
+                if(scrollTop>=1263){
+                    newsTab.classList.add("newsFixed");
+                }else if(1263<=scrollTop<=3200){
+                //当页面滚动距离超过3200时
+                    newsTab.classList.remove("newsFixed");
                 }
             }
         })();
