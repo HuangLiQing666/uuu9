@@ -60,8 +60,10 @@
         var a=Array.from(document.querySelectorAll("div.tab>a"));
         tab.onclick=function(e){
             var c= e.target;
-            var d= a.indexOf(c);
-            i=d+1;
+            i= a.indexOf(c);
+            dd.style.left=-200*i+"px";
+            a[i-1].className="on";
+            $(a[i-1]).siblings().removeClass();
         }
         setInterval(function(){
             if(i>4){
