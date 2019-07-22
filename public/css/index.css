@@ -28,7 +28,7 @@ body{
 a:hover .scale_img{transform: scale(1.1);}
 .index_tittle>.carousel>.carousel-inner>.carousel-item>a>span{
     width:770px;height:130px;
-    background:url("../../image/index/png.png") repeat-x;
+    background:url("../image/index/png.png") repeat-x;
     font-size: 28px;font-family: 微软雅黑;
     line-height: 50px;text-indent: 18px;
     color:#fff;
@@ -74,12 +74,38 @@ a:hover .scale_img{transform: scale(1.1);}
 .hotnews h3 a{
     color:#666666;
 }
+.tempWrap,ul#endGames{
+    overflow: hidden;
+    position: relative;
+}
 .tempWrap{width:1176px;}
+ul#endGames{
+    width:3822px;
+    position: relative;
+}
+#endGames.transition{transition: all .5s;}
+div.slideBox{
+    position: relative;
+    height:228px;
+    overflow: hidden;
+}
+div.slideBox>a.esPrev,div.slideBox>a.esNext{
+    position: absolute;
+    left:0;top:88px;
+    display: block;
+    width:60px;height:60px;
+    background:url("../image/index/slideGroup.png") 0 0 no-repeat;
+    z-index: 100;
+}
+div.slideBox>a.esNext{
+    left:auto;right:5px;
+    background:url("../image/index/slideGroup.png") -60px 0 no-repeat;
+}
 .tempWrap ul li{
     margin-left:14px;
 }
 .esports{
-    background:url("../../image/index/esbg.jpg") no-repeat;
+    background:url("../image/index/esbg.jpg") no-repeat;
 }
 .esports .w-1200{height:368px;}
 .esbox{
@@ -87,7 +113,7 @@ a:hover .scale_img{transform: scale(1.1);}
 }
 .eventbox{
     width:280px;height:228px;
-    background:#fff url("../../image/index/bszt.png") no-repeat;
+    background:#fff url("../image/index/bszt.png") no-repeat;
 }
 .estit{margin-top:40px;}
 .estit h2{
@@ -182,7 +208,7 @@ a:hover .scale_img{transform: scale(1.1);}
 .news_tab em a i{
     width:15px;height:16px;
     display: inline-block;
-    background:url("../../image/index/ico_em.png") no-repeat;
+    background:url("../image/index/ico_em.png") no-repeat;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -256,7 +282,7 @@ a:hover .scale_img{transform: scale(1.1);}
     overflow: hidden;
 }
 .news_box .tags .times{
-    background: url("../../image/index/ico_time.png") 0 center no-repeat;
+    background: url("../image/index/ico_time.png") 0 center no-repeat;
 }
 .news_box .tags span{
     float: left;
@@ -275,7 +301,7 @@ a:hover .scale_img{transform: scale(1.1);}
 }
 .news_sad a i,.adbox2 a i{
     width:22px;height:12px;
-    background:url("../../image/index/adico.png") no-repeat;
+    background:url("../image/index/adico.png") no-repeat;
     position: absolute;
     right:5px;bottom:-50px;
 }
@@ -357,11 +383,11 @@ a:hover .scale_img{transform: scale(1.1);}
     color:#f07800;
 }
 .lblist dl{
-    background:url("../../image/index/lblistbg.png") 114px -36px no-repeat;
+    background:url("../image/index/lblistbg.png") 114px -36px no-repeat;
     cursor:pointer;
 }
 .lblist dl:hover{
-    background:url("../../image/index/lblistbg.png") 114px 0px no-repeat
+    background:url("../image/index/lblistbg.png") 114px 0px no-repeat
 }
 .lblist dl:hover dt{color:#f07800;}
 .lblist dt{
@@ -435,6 +461,6 @@ a:hover .scale_img{transform: scale(1.1);}
 }
 .djbox ul li{
     line-height: 24px;
-    background:url("../../image/index/li.png") 0 center no-repeat;
+    background:url("../image/index/li.png") 0 center no-repeat;
     padding-left: 15px;
 }

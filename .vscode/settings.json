@@ -1,0 +1,7 @@
+{
+    "editor.tabCompletion": "on",
+    "emmet.triggerExpansionOnTab": true,
+    "files.associations": {
+        "*.js": "html"
+    }
+}
