@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="boot/css/bootstrap.css">
-    <script src="boot/js/jquery.min.js"></script>
-    <script src="boot/js/popper.min.js"></script>
-    <script src="boot/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="boot/css/comm.css">
-    <link rel="stylesheet" href="boot/css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header><iframe class="my_header" scrolling="no" src="header.html" frameborder="0"></iframe></header>
+    <header id="header"></header>
     <article>
         <div class="index_head w-1200 clear">
             <div><img src="image/index/5d1f05c700787.jpg" alt=""></div>
@@ -81,72 +81,118 @@
                             </li>
                             <li>
                                 <div class="eventbox">
-                                <div class="estop">英雄联盟</div>
-                                <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
-                                <div class="absbox clear">
-                                    <div class="abs float-left">
-                                        <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
-                                        <p>T1</p>
+                                    <div class="estop">英雄联盟</div>
+                                    <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
+                                    <div class="absbox clear">
+                                        <div class="abs float-left">
+                                            <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
+                                            <p>T1</p>
+                                        </div>
+                                        <div class="abs_tit float-left">
+                                            <h4>0 : 1</h4>
+                                            <div class="es_ending">已经结束</div>
+                                        </div>
+                                        <div class="abs float-right">
+                                            <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
+                                            <p>IG</p>
+                                        </div>
                                     </div>
-                                    <div class="abs_tit float-left">
-                                        <h4>0 : 1</h4>
-                                        <div class="es_ending">已经结束</div>
-                                    </div>
-                                    <div class="abs float-right">
-                                        <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
-                                        <p>IG</p>
+                                    <div class="es_other clear mt-20">
+                                        <div class="es_time">07-05日 21:00</div>
                                     </div>
                                 </div>
-                                <div class="es_other clear mt-20">
-                                    <div class="es_time">07-05日 21:00</div>
-                                </div>
-                            </div>
                             </li>
                             <li>
                                 <div class="eventbox">
-                                <div class="estop">英雄联盟</div>
-                                <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
-                                <div class="absbox clear">
-                                    <div class="abs float-left">
-                                        <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
-                                        <p>T1</p>
+                                    <div class="estop">英雄联盟</div>
+                                    <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
+                                    <div class="absbox clear">
+                                        <div class="abs float-left">
+                                            <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
+                                            <p>T1</p>
+                                        </div>
+                                        <div class="abs_tit float-left">
+                                            <h4>0 : 1</h4>
+                                            <div class="es_ending">已经结束</div>
+                                        </div>
+                                        <div class="abs float-right">
+                                            <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
+                                            <p>IG</p>
+                                        </div>
                                     </div>
-                                    <div class="abs_tit float-left">
-                                        <h4>0 : 1</h4>
-                                        <div class="es_ending">已经结束</div>
-                                    </div>
-                                    <div class="abs float-right">
-                                        <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
-                                        <p>IG</p>
+                                    <div class="es_other clear mt-20">
+                                        <div class="es_time">07-05日 21:00</div>
                                     </div>
                                 </div>
-                                <div class="es_other clear mt-20">
-                                    <div class="es_time">07-05日 21:00</div>
-                                </div>
-                            </div>
                             </li>
                             <li>
                                 <div class="eventbox">
-                                <div class="estop">英雄联盟</div>
-                                <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
-                                <div class="absbox clear">
-                                    <div class="abs float-left">
-                                        <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
-                                        <p>T1</p>
+                                    <div class="estop">英雄联盟</div>
+                                    <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
+                                    <div class="absbox clear">
+                                        <div class="abs float-left">
+                                            <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
+                                            <p>T1</p>
+                                        </div>
+                                        <div class="abs_tit float-left">
+                                            <h4>0 : 1</h4>
+                                            <div class="es_ending">已经结束</div>
+                                        </div>
+                                        <div class="abs float-right">
+                                            <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
+                                            <p>IG</p>
+                                        </div>
                                     </div>
-                                    <div class="abs_tit float-left">
-                                        <h4>0 : 1</h4>
-                                        <div class="es_ending">已经结束</div>
-                                    </div>
-                                    <div class="abs float-right">
-                                        <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
-                                        <p>IG</p>
+                                    <div class="es_other clear mt-20">
+                                        <div class="es_time">07-05日 21:00</div>
                                     </div>
                                 </div>
-                                <div class="es_other clear mt-20">
-                                    <div class="es_time">07-05日 21:00</div>
+                            </li>
+                            <li>
+                                <div class="eventbox">
+                                    <div class="estop">英雄联盟</div>
+                                    <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
+                                    <div class="absbox clear">
+                                        <div class="abs float-left">
+                                            <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
+                                            <p>T1</p>
+                                        </div>
+                                        <div class="abs_tit float-left">
+                                            <h4>0 : 1</h4>
+                                            <div class="es_ending">已经结束</div>
+                                        </div>
+                                        <div class="abs float-right">
+                                            <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
+                                            <p>IG</p>
+                                        </div>
+                                    </div>
+                                    <div class="es_other clear mt-20">
+                                        <div class="es_time">07-05日 21:00</div>
+                                    </div>
                                 </div>
-                            </div>
+                            </li>
+                            <li>
+                                <div class="eventbox">
+                                    <div class="estop">英雄联盟</div>
+                                    <div class="estt">2019亚洲对抗赛小组赛（BO1）</div>
+                                    <div class="absbox clear">
+                                        <div class="abs float-left">
+                                            <div class="absimg"><img src="image/index/T1.jpg" alt=""></div>
+                                            <p>T1</p>
+                                        </div>
+                                        <div class="abs_tit float-left">
+                                            <h4>0 : 1</h4>
+                                            <div class="es_ending">已经结束</div>
+                                        </div>
+                                        <div class="abs float-right">
+                                            <div class="absimg"><img src="image/index/IG.jpg" alt=""></div>
+                                            <p>IG</p>
+                                        </div>
+                                    </div>
+                                    <div class="es_other clear mt-20">
+                                        <div class="es_time">07-05日 21:00</div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -1390,7 +1436,11 @@
             </div>
         </div>
     </article>
-    <footer><iframe class="my_footer" scrolling="no" src="footer.html" frameborder="0"></iframe></footer>
+    <footer id="footer"></footer>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script>
         /*news_tab切换标签*/
         (function(){
