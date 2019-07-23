@@ -101,7 +101,7 @@ div.slideBox>a.esNext{
     left:auto;right:5px;
     background:url("../image/index/slideGroup.png") -60px 0 no-repeat;
 }
-.tempWrap ul li{
+.tempWrap>ul#endGames li{
     margin-left:14px;
 }
 .esports{
@@ -464,3 +464,63 @@ div.slideBox>a.esNext{
     background:url("../image/index/li.png") 0 center no-repeat;
     padding-left: 15px;
 }
+ul#title_tabs{
+    float: right;
+    width:41px;height:6px;
+    background: #f9f9f9;
+    margin-top: 12px;
+    overflow: hidden;
+    list-style: none;
+}
+ul#title_tabs li{
+    float: left;
+    width:6px;height:6px;
+    background: #cccccc;
+    overflow: hidden;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius:50%;
+}
+.multipleColumn>.title h2::before{
+    width: 178px;
+}
+div.bd_tempWrap{
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+div.hidpic{width:412px;overflow: hidden;}
+div.hidpic a{
+    width:194px;height:90px;
+    float: left;
+    overflow: hidden;
+    margin:14px 12px 0 0;
+    position: relative;
+}
+div.hidpic>a img{
+    width:194px;height:90px;
+    display: block; 
+}
+div.hidpic>a i{
+    width:30px;height:30px;
+    background:url("../image/index/v.png") 0 0 no-repeat;
+    background-size:30px 30px;
+    position: absolute;
+    left: 82px;top:30px; 
+}
+div.bd>.bd_tempWrap>.rdbox>div.con{
+    float: left;
+    width:400px;
+}
+ul.synews li{
+    height:36px;
+    font-size:16px;
+    line-height: 36px;
+    background: url("../image/index/lblistbg.png") 6px -36px no-repeat;
+    padding-left: 30px;
+    overflow: hidden;
+}
+ul.synews>li:hover{
+    background: url("../image/index/lblistbg.png") 6px 0 no-repeat;
+}
+ul.synews>li a{color:#555;}

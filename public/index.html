@@ -11,6 +11,9 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/comm.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/header.js"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -1591,10 +1594,47 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rows mt-25">
+                    <div class="rows mt-25 multipleColumn">
                         <div class="title clear">
+                            <ul id="title_tabs">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
                             <h2>官方新闻</h2>
-                            <em><a href="">更多</a></em>
+                        </div>
+                        <div class="bd">
+                            <div class="bd_tempWrap">
+                                <div class="rdbox">
+                                    <div class="bd_con">
+                                        <div class="hidpic clear">
+                                            <a href="">
+                                                <img src="image/index/201907221214368591.jpg" alt="">
+                                                <i></i>
+                                            </a>
+                                            <a href="">
+                                                <img src="image/index/201907181159237341.jpg" alt="">
+                                                <i></i>
+                                            </a>
+                                            <a href="">
+                                                <img src="image/index/201907171030454211.jpg" alt="">
+                                                <i></i>
+                                            </a>
+                                            <a href="">
+                                                <img src="image/index/201907151118398121.jpg" alt="">
+                                                <i></i>
+                                            </a>
+                                        </div>
+                                        <ul class="synews mt-20">
+                                            <li><a title="海潮逆涌《阴阳师》海国篇全新版本即将来袭!" href="">海潮逆涌《阴阳师》海国篇全新版本即将来袭!</a></li>
+                                            <li><a title="《梦幻西游》电脑版2019暑期全新资料片今日开测" href="">《梦幻西游》电脑版2019暑期全新资料片今日开测</a></li>
+                                            <li><a title="千锤百炼、想你所想——天刀手游飞花测今日开启" href="">千锤百炼、想你所想——天刀手游飞花测今日开启</a></li>
+                                            <li><a title="ChinaJoy2019英特尔再度包馆 盛宴别错过" href="">ChinaJoy2019英特尔再度包馆 盛宴别错过</a></li>
+                                            <li><a title="《我的起源》线下见面会重磅来袭！" href="">《我的起源》线下见面会重磅来袭！</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1602,9 +1642,6 @@
         </div>
     </article>
     <footer id="footer"></footer>
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/vue.js"></script>
-    <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script>
         /*news_tab切换标签*/

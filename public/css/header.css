@@ -20,7 +20,7 @@
 .formbox{
     width:300px;height:32px;
     border:1px solid #f6ae66;
-    background:url(../../image/header/search.png) 0 0 no-repeat;
+    background:url(../image/header/search.png) 0 0 no-repeat;
 }
 .textbox{
     width:270px;height:32px;
@@ -56,7 +56,7 @@
 .navbox dl{margin-bottom:0px;}
 .navbox>dl>dt,.subnav>dl>dt{
     width:75px;height:23px;
-    background:url(../../image/header/navdt.png) 0 0 no-repeat;
+    background:url(../image/header/navdt.png) 0 0 no-repeat;
     float:left;
     font-size:12px;color:#fff;
     line-height: 23px;text-indent:11px;
@@ -92,13 +92,13 @@
 .navbox dl dd a i.h{
     display:inline-block;
     width:9px;height:9px;
-    background:url(../../image/header/ico_hot.png) no-repeat;
+    background:url(../image/header/ico_hot.png) no-repeat;
     vertical-align:top;
     margin-left:3px;
 }.navbox dl dd a i.n{
     display:inline-block;
     width:9px;height:9px;
-    background:url(../../image/header/ico_new.png) no-repeat;
+    background:url(../image/header/ico_new.png) no-repeat;
     vertical-align:top;
     margin-left:3px;
 }
@@ -124,19 +124,19 @@
     background-position:0px -93px;
 }
 .header_icon1{
-    background:url("image/header/icon.png") no-repeat 0px 1px;
+    background:url("../image/header/icon.png") no-repeat 0px 1px;
     padding-left:18px;
 }
 .header_icon2{
-    background: url("image/header/icon.png") no-repeat -85px 1px;
+    background: url("../image/header/icon.png") no-repeat -85px 1px;
     padding-left:18px;
 }
 .header_icon3{
-    background: url("image/header/icon.png") no-repeat -202px 1px;
+    background: url("../image/header/icon.png") no-repeat -202px 1px;
     padding-left:18px;
 }
 .header_icon4{
-    background: url("image/header/ico_rank.png") no-repeat 0px center;
+    background: url("../image/header/ico_rank.png") no-repeat 0px center;
     padding-left:18px;
     border-right:1px solid #aaa;
 }
@@ -144,7 +144,7 @@
     padding-left: 20px;
 }
  .header_news>a{
-     background: url("image/header/horn.png") no-repeat 0px center;
+     background: url("../image/header/horn.png") no-repeat 0px center;
      padding-left:18px;
  }
    .header_other a{
